@@ -1094,6 +1094,14 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .about-content > div:not(.about-text) {
+        margin-left: 0 !important;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
     .contact-info-wrapper {
         grid-template-columns: 1fr;
         gap: 25px;
