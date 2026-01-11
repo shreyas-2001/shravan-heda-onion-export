@@ -277,6 +277,37 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+.hero-bg-image.active {
+    opacity: 1;
+}
+
+.hero-bg-image-1 {
+    background-image: url('assets/hero-bg-1.jpg');
+}
+
+.hero-bg-image-2 {
+    background-image: url('assets/hero-bg-2.jpg');
+}
+
+.hero-bg-image-3 {
+    background-image: url('assets/hero-bg-3.jpg');
 }
 
 .hero-content {
@@ -515,6 +546,18 @@ section {
 .product-icon {
     font-size: 4rem;
     margin-bottom: 20px;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-card h3 {

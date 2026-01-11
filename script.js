@@ -326,3 +326,21 @@ preloadLink.as = 'style';
 preloadLink.href = 'styles.css';
 document.head.appendChild(preloadLink);
 
+// Hero Background Image Rotation
+document.addEventListener('DOMContentLoaded', () => {
+    const heroImages = document.querySelectorAll('.hero-bg-image');
+    let currentImageIndex = 0;
+    
+    if (heroImages.length > 0) {
+        // Set first image as active
+        heroImages[0].classList.add('active');
+        
+        // Rotate images every 3 seconds
+        setInterval(() => {
+            heroImages[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            heroImages[currentImageIndex].classList.add('active');
+        }, 3000);
+    }
+});
+
